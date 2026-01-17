@@ -4,42 +4,32 @@ Get up and running with the Electrician Billing App in minutes!
 
 ## Step 1: Open in Xcode
 
-1. Download or clone this repository
-2. Open Xcode (version 12.0 or later)
-3. Create a new iOS App project:
-   - File > New > Project
-   - Select "iOS" > "App"
-   - Product Name: **ElectricianBilling**
-   - Interface: **Storyboard**
-   - Language: **Swift**
-   - Lifecycle: **UIKit App Delegate**
+1. Download or clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/ClaudeDemo.git
+   cd ClaudeDemo
+   ```
+2. Open the Xcode project:
+   - Double-click `ElectricianBilling.xcodeproj`
+   - Or from terminal: `open ElectricianBilling.xcodeproj`
+3. Wait for Xcode to index the project
 
-## Step 2: Add the Source Files
+The project is already set up with:
+- ✅ All Swift source files
+- ✅ Main app target
+- ✅ Intents Extension target
+- ✅ Info.plist with required permissions
+- ✅ Assets catalog and launch screen
 
-1. Delete the default `ViewController.swift` file
-2. Drag and drop all folders from this repository into your Xcode project:
-   - `ElectricianBilling/` folder (contains all .swift files)
-3. When prompted, check "Copy items if needed"
-4. Replace the default `Info.plist` with the one from this repository
-
-## Step 3: Add Intents Extension
-
-1. In Xcode: File > New > Target
-2. Select "Intents Extension"
-3. Product Name: **ElectricianBillingIntents**
-4. Click Finish
-5. Replace the default IntentHandler.swift with the one from `ElectricianBilling/Intents/`
-6. Add the other files from the Intents folder
-
-## Step 4: Configure Signing
+## Step 2: Configure Signing
 
 1. Select your project in the navigator
 2. Select the "ElectricianBilling" target
 3. Go to "Signing & Capabilities"
 4. Select your Team (you need an Apple Developer account)
-5. Repeat for "ElectricianBillingIntents" target
+5. Repeat for "Intents" target
 
-## Step 5: Add Capabilities
+## Step 3: Add Capabilities
 
 For the main app target, add these capabilities:
 1. Click "+ Capability" button
@@ -47,7 +37,7 @@ For the main app target, add these capabilities:
 3. Location permissions are already in Info.plist
 4. Contacts permissions are already in Info.plist
 
-## Step 6: Build and Run
+## Step 4: Build and Run
 
 1. Connect your iPhone via USB
 2. Select your iPhone as the build target (not Simulator)
@@ -57,7 +47,7 @@ For the main app target, add these capabilities:
    - Contacts
    - Siri
 
-## Step 7: Set Up Siri (Optional but Recommended)
+## Step 5: Set Up Siri (Optional but Recommended)
 
 ### Method A: Use the INSendMessageIntent
 1. Open the app
@@ -73,7 +63,7 @@ For the main app target, add these capabilities:
 6. Save as "Record Work"
 7. Now say: "Hey Siri, Record Work"
 
-## Step 8: Test the App
+## Step 6: Test the App
 
 1. **Add an Activity**:
    - Tap the "+" button
