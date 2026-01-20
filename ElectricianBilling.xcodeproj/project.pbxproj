@@ -23,6 +23,9 @@
 		1A00000E000000000000001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A00000E000000000000001 /* LaunchScreen.storyboard */; };
 		1B000001000000000000001 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B000001000000000000001 /* IntentHandler.swift */; };
 		1B000003000000000000001 /* IntentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B000001000000000000001 /* IntentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1B000004000000000000001 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A000003000000000000001 /* Activity.swift */; };
+		1B000005000000000000001 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A000006000000000000001 /* LocationManager.swift */; };
+		1B000006000000000000001 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A000007000000000000001 /* ActivityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -282,6 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B000001000000000000001 /* IntentHandler.swift in Sources */,
+				1B000004000000000000001 /* Activity.swift in Sources */,
+				1B000005000000000000001 /* LocationManager.swift in Sources */,
+				1B000006000000000000001 /* ActivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
