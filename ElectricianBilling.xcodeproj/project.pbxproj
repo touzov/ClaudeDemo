@@ -22,7 +22,6 @@
 		1A00000D000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A00000D000000000000001 /* Assets.xcassets */; };
 		1A00000E000000000000001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A00000E000000000000001 /* LaunchScreen.storyboard */; };
 		1B000001000000000000001 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B000001000000000000001 /* IntentHandler.swift */; };
-		1B000002000000000000001 /* RecordActivityIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B000002000000000000001 /* RecordActivityIntent.swift */; };
 		1B000003000000000000001 /* IntentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B000001000000000000001 /* IntentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		2A00000E000000000000001 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A00000F000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B000001000000000000001 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		2B000002000000000000001 /* RecordActivityIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordActivityIntent.swift; sourceTree = "<group>"; };
 		2B000003000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A000001000000000000001 /* ElectricianBilling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricianBilling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B000001000000000000001 /* IntentsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IntentsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				2B000001000000000000001 /* IntentHandler.swift */,
-				2B000002000000000000001 /* RecordActivityIntent.swift */,
 				2B000003000000000000001 /* Info.plist */,
 			);
 			path = Intents;
@@ -285,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B000001000000000000001 /* IntentHandler.swift in Sources */,
-				1B000002000000000000001 /* RecordActivityIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
