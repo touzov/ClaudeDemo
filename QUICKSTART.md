@@ -49,19 +49,23 @@ For the main app target, add these capabilities:
 
 ## Step 5: Set Up Siri (Optional but Recommended)
 
-### Method A: Use the INSendMessageIntent
-1. Open the app
-2. Say: "Hey Siri, send a message to Work Activity saying installed electrical panel"
-3. Siri will save it as an activity!
+### Method A: Use Siri Shortcuts (Recommended)
+1. Open the Shortcuts app on your iPhone
+2. Tap "+" to create a new shortcut
+3. Tap "Add Action"
+4. Search for "Record Activity" (this is our custom intent)
+5. The action will appear as "Record Work Activity"
+6. Tap "activityDescription" and select "Ask Each Time"
+7. Tap the settings icon (•••) at the top
+8. Name it "Record Work" and add a custom Siri phrase
+9. Now say: "Hey Siri, Record Work" and describe your activity
 
-### Method B: Create a Siri Shortcut
-1. Open Shortcuts app on iPhone
-2. Tap "+" to create new shortcut
-3. Add "Send Message" action
-4. Set recipient to "Work Activity"
-5. Set message to "Ask for Input" (so Siri asks you to describe the work)
-6. Save as "Record Work"
-7. Now say: "Hey Siri, Record Work"
+### Method B: Add to Siri from Settings
+1. Go to Settings > Siri & Search
+2. Tap "All Shortcuts"
+3. Find "Record Work Activity"
+4. Tap "+" to add a custom phrase like "Log work"
+5. Now say: "Hey Siri, Log work" followed by your description
 
 ## Step 6: Test the App
 
