@@ -31,7 +31,10 @@ class ActivityManager: ObservableObject {
     }
 
     func deleteActivities(at offsets: IndexSet) {
-        activities.remove(atOffsets: offsets)
+        // Remove items at specified indices in reverse order to maintain index validity
+        for index in offsets.sorted().reversed() {
+            activities.remove(at: index)
+        }
         saveActivities()
     }
 
