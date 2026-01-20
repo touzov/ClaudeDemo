@@ -23,7 +23,7 @@
 		1A00000E000000000000001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A00000E000000000000001 /* LaunchScreen.storyboard */; };
 		1B000001000000000000001 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B000001000000000000001 /* IntentHandler.swift */; };
 		1B000002000000000000001 /* RecordActivityIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B000002000000000000001 /* RecordActivityIntent.swift */; };
-		1B000003000000000000001 /* Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B000001000000000000001 /* Intents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1B000003000000000000001 /* IntentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B000001000000000000001 /* IntentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,7 @@
 			containerPortal = 4A000001000000000000001 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3B000001000000000000000;
-			remoteInfo = Intents;
+			remoteInfo = IntentsExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1B000003000000000000001 /* Intents.appex in Embed App Extensions */,
+				1B000003000000000000001 /* IntentsExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +70,7 @@
 		2B000002000000000000001 /* RecordActivityIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordActivityIntent.swift; sourceTree = "<group>"; };
 		2B000003000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A000001000000000000001 /* ElectricianBilling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricianBilling.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B000001000000000000001 /* Intents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Intents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B000001000000000000001 /* IntentsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IntentsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				3A000001000000000000001 /* ElectricianBilling.app */,
-				3B000001000000000000001 /* Intents.appex */,
+				3B000001000000000000001 /* IntentsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 			productReference = 3A000001000000000000001 /* ElectricianBilling.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3B000001000000000000000 /* Intents */ = {
+		3B000001000000000000000 /* IntentsExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B000001000000000000001 /* Build configuration list for PBXNativeTarget "Intents" */;
+			buildConfigurationList = 6B000001000000000000001 /* Build configuration list for PBXNativeTarget "IntentsExtension" */;
 			buildPhases = (
 				1E000002000000000000001 /* Frameworks */,
 				1F000002000000000000001 /* Resources */,
@@ -199,9 +199,9 @@
 			);
 			dependencies = (
 			);
-			name = Intents;
-			productName = Intents;
-			productReference = 3B000001000000000000001 /* Intents.appex */;
+			name = IntentsExtension;
+			productName = IntentsExtension;
+			productReference = 3B000001000000000000001 /* IntentsExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -236,7 +236,7 @@
 			projectRoot = "";
 			targets = (
 				3A000001000000000000000 /* ElectricianBilling */,
-				3B000001000000000000000 /* Intents */,
+				3B000001000000000000000 /* IntentsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -294,7 +294,7 @@
 /* Begin PBXTargetDependency section */
 		1C000002000000000000001 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B000001000000000000000 /* Intents */;
+			target = 3B000001000000000000000 /* IntentsExtension */;
 			targetProxy = 1C000001000000000000001 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -486,7 +486,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.electrician.billing.intents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.electrician.billing.intentsextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -511,7 +511,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.electrician.billing.intents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.electrician.billing.intentsextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B000001000000000000001 /* Build configuration list for PBXNativeTarget "Intents" */ = {
+		6B000001000000000000001 /* Build configuration list for PBXNativeTarget "IntentsExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C000001000000000000001 /* Debug */,
