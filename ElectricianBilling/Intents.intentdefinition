@@ -39,6 +39,14 @@
 					<true/>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
 					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Record ${activityDescription}</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>bHK3wp</string>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string>Log work activity</string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>xPq9mL</string>
 				</dict>
 			</dict>
 			<key>INIntentParameters</key>
