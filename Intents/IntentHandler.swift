@@ -4,7 +4,7 @@ import CoreLocation
 class IntentHandler: INExtension {
 
     override func handler(for intent: INIntent) -> Any {
-        if intent is INSendMessageIntent {
+        if intent is RecordActivityIntent {
             return RecordActivityIntentHandler()
         }
         return self
@@ -12,24 +12,24 @@ class IntentHandler: INExtension {
 }
 
 // Handler for recording activities via Siri
-class RecordActivityIntentHandler: NSObject, INSendMessageIntentHandling {
+class RecordActivityIntentHandler: NSObject, RecordActivityIntentHandling {
 
-    func handle(intent: INSendMessageIntent, completion: @escaping (INSendMessageIntentResponse) -> Void) {
-        guard let content = intent.content, !content.isEmpty else {
-            completion(INSendMessageIntentResponse(code: .failure, userActivity: nil))
+    func handle(intent: RecordActivityIntent, completion: @escaping (RecordActivityIntentResponse) -> Void) {
+        guard let description = intent.activityDescription, !description.isEmpty else {
+            completion(RecordActivityIntentResponse(code: .failure, userActivity: nil))
             return
         }
 
         // Get current location
         LocationManager.shared.requestLocation { location in
             guard let location = location else {
-                completion(INSendMessageIntentResponse(code: .failure, userActivity: nil))
+                completion(RecordActivityIntentResponse(code: .failure, userActivity: nil))
                 return
             }
 
             // Create activity with description from Siri
             let activity = Activity(
-                description: content,
+                description: description,
                 timestamp: Date(),
                 location: location,
                 duration: 3600, // Default 1 hour, can be adjusted
@@ -39,24 +39,18 @@ class RecordActivityIntentHandler: NSObject, INSendMessageIntentHandling {
             // Save activity
             ActivityManager.shared.addActivity(activity)
 
-            let response = INSendMessageIntentResponse(code: .success, userActivity: nil)
+            let response = RecordActivityIntentResponse(code: .success, userActivity: nil)
             completion(response)
         }
     }
 
-    func confirm(intent: INSendMessageIntent, completion: @escaping (INSendMessageIntentResponse) -> Void) {
-        completion(INSendMessageIntentResponse(code: .ready, userActivity: nil))
+    func confirm(intent: RecordActivityIntent, completion: @escaping (RecordActivityIntentResponse) -> Void) {
+        completion(RecordActivityIntentResponse(code: .success, userActivity: nil))
     }
 
-    func resolveRecipients(for intent: INSendMessageIntent, with completion: @escaping ([INSendMessageRecipientResolutionResult]) -> Void) {
-        // Use a dummy recipient for our custom Siri shortcut
-        let recipient = INPerson(personHandle: INPersonHandle(value: "WorkActivity", type: .unknown), nameComponents: nil, displayName: "Work Activity", image: nil, contactIdentifier: nil, customIdentifier: "work_activity")
-        completion([INSendMessageRecipientResolutionResult.success(with: recipient)])
-    }
-
-    func resolveContent(for intent: INSendMessageIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
-        if let content = intent.content, !content.isEmpty {
-            completion(INStringResolutionResult.success(with: content))
+    func resolveActivityDescription(for intent: RecordActivityIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
+        if let description = intent.activityDescription, !description.isEmpty {
+            completion(INStringResolutionResult.success(with: description))
         } else {
             completion(INStringResolutionResult.needsValue())
         }

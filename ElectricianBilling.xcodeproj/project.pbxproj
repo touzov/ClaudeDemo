@@ -26,6 +26,8 @@
 		1B000004000000000000001 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A000003000000000000001 /* Activity.swift */; };
 		1B000005000000000000001 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A000006000000000000001 /* LocationManager.swift */; };
 		1B000006000000000000001 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A000007000000000000001 /* ActivityManager.swift */; };
+		1A00000F000000000000001 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2A000010000000000000001 /* Intents.intentdefinition */; };
+		1B000007000000000000001 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2A000010000000000000001 /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,7 @@
 		2A00000D000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A00000E000000000000001 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A00000F000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A000010000000000000001 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		2B000001000000000000001 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		2B000003000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A000001000000000000001 /* ElectricianBilling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricianBilling.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +115,7 @@
 				2A00000D000000000000001 /* Assets.xcassets */,
 				2A00000E000000000000001 /* LaunchScreen.storyboard */,
 				2A00000F000000000000001 /* Info.plist */,
+				2A000010000000000000001 /* Intents.intentdefinition */,
 			);
 			path = ElectricianBilling;
 			sourceTree = "<group>";
@@ -277,6 +281,7 @@
 				1A00000A000000000000001 /* ActivitiesViewController.swift in Sources */,
 				1A00000B000000000000001 /* ClientSelectionViewController.swift in Sources */,
 				1A00000C000000000000001 /* InvoiceViewController.swift in Sources */,
+				1A00000F000000000000001 /* Intents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +293,7 @@
 				1B000004000000000000001 /* Activity.swift in Sources */,
 				1B000005000000000000001 /* LocationManager.swift in Sources */,
 				1B000006000000000000001 /* ActivityManager.swift in Sources */,
+				1B000007000000000000001 /* Intents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
